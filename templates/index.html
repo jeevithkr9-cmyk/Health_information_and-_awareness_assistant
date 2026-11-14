@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f7f2">
+    <title>Careline — Community health, made clearer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="Careline home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none"><path d="M16 27s-10-5.8-10-13a5.8 5.8 0 0 1 10-3.9A5.8 5.8 0 0 1 26 14c0 7.2-10 13-10 13Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M11 16h3l1.5-3 2.2 6 1.4-3H22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="brand-name">careline<span>.</span></span>
+        </a>
+        <div class="topbar-note"><span class="status-dot"></span> Community health companion</div>
+        <a class="top-link" href="#how-it-works">How it works <span aria-hidden="true">↗</span></a>
+      </header>
+
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-line"></span> HEALTH INFORMATION, WITH CARE</div>
+          <h1 id="hero-title">A little clarity<br>can go a <em>long way.</em></h1>
+          <p class="hero-description">Everyday health awareness, one simple conversation at a time. Ask a question and get a clear place to start.</p>
+          <div class="trust-note">
+            <span class="trust-icon" aria-hidden="true">✳</span>
+            <span><strong>Helpful, not a replacement for care.</strong><br>For personal medical concerns, always speak with a health professional.</span>
+          </div>
+          <a class="scroll-link" href="#how-it-works"><span class="scroll-icon" aria-hidden="true">↓</span> A calmer way to find answers</a>
+        </div>
+
+        <section class="chat-card" aria-label="Interactive Careline chat prototype">
+          <div class="chat-header">
+            <div class="chat-avatar" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none"><path d="M16 27s-10-5.8-10-13a5.8 5.8 0 0 1 10-3.9A5.8 5.8 0 0 1 26 14c0 7.2-10 13-10 13Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M11 16h3l1.5-3 2.2 6 1.4-3H22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div class="chat-heading">
+              <strong>Careline assistant</strong>
+              <span><span class="status-dot"></span> Here to help</span>
+            </div>
+            <span class="prototype-tag"><span aria-hidden="true">✦</span> LIVE DEMO</span>
+          </div>
+
+          <div class="chat-body" id="chat-messages" aria-live="polite" aria-label="Conversation">
+            <div class="date-divider"><span> TODAY </span></div>
+            <div class="message-row bot-row">
+              <span class="mini-avatar" aria-hidden="true">✳</span>
+              <div class="bubble-wrap">
+                <div class="bubble bot-bubble">Hi there! I'm here to share simple, verified health awareness. What would you like to know?</div>
+                <span class="message-time">Careline · just now</span>
+              </div>
+            </div>
+            <div class="suggestion-label">TRY ASKING</div>
+            <div class="suggestions">
+              <button class="suggestion" type="button" data-message="How can I prevent dengue?"><span class="suggestion-icon dengue-icon" aria-hidden="true">✳</span> Dengue prevention <span class="suggestion-arrow" aria-hidden="true">↗</span></button>
+              <button class="suggestion" type="button" data-message="How do I keep good hygiene?"><span class="suggestion-icon hygiene-icon" aria-hidden="true">✦</span> Hand hygiene <span class="suggestion-arrow" aria-hidden="true">↗</span></button>
+            </div>
+          </div>
+
+          <form class="chat-composer" id="chat-form">
+            <label class="sr-only" for="message-input">Type your health awareness question</label>
+            <input id="message-input" name="message" type="text" placeholder="Type a health question..." autocomplete="off" maxlength="500" required>
+            <button class="send-button" type="submit" aria-label="Send message">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m21 3-7.2 18-3.6-7.2L3 10.2 21 3Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.2 13.8 15 9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            </button>
+          </form>
+          <div class="chat-footnote"><span aria-hidden="true">♧</span> Your questions stay in this demo</div>
+        </section>
+      </section>
+
+      <section class="bottom-strip" id="how-it-works">
+        <div class="bottom-intro">
+          <span class="bottom-kicker">SMALL STEPS. BETTER AWARENESS.</span>
+          <h2>Good information<br>should feel <em>within reach.</em></h2>
+        </div>
+        <div class="feature">
+          <span class="feature-number">01</span>
+          <span class="feature-icon feature-icon-leaf" aria-hidden="true">✳</span>
+          <h3>Simple answers</h3>
+          <p>Everyday topics, explained in plain language.</p>
+        </div>
+        <div class="feature">
+          <span class="feature-number">02</span>
+          <span class="feature-icon feature-icon-chat" aria-hidden="true">♡</span>
+          <h3>Safety first</h3>
+          <p>Clear boundaries and a nudge to seek care when needed.</p>
+        </div>
+        <div class="feature">
+          <span class="feature-number">03</span>
+          <span class="feature-icon feature-icon-community" aria-hidden="true">⌁</span>
+          <h3>Made for everyone</h3>
+          <p>A welcoming starting point for community awareness.</p>
+        </div>
+      </section>
+      <footer class="footer"><span>careline<span class="footer-period">.</span> &nbsp; A community awareness prototype</span><span>Not medical advice · In an emergency, contact local services.</span></footer>
+    </main>
+    <script src="{{ url_for('static', filename='app.js') }}" defer></script>
+  </body>
+</html>
